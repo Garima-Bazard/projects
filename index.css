@@ -1,0 +1,250 @@
+@import url(https://fonts.googleapis.com/css2?family=Passion+One&:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	font-size: 20px;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+#background-text {
+	transform: skewY(-7deg);
+	text-shadow: 2px 2px rgb(255, 115, 0);
+	word-wrap: break-word;
+	vertical-align: middle;
+	text-align: left;
+	font-family: Passion One;
+	font-size: 70px;
+	color: #3d3d3d;
+	z-index: -1;
+}
+
+#background-text2 {
+	word-wrap: break-word;
+	vertical-align: middle;
+	text-align: right;
+	/* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+	font-size: 30px;
+	color: #3d3d3d;
+}
+
+#background-text3 {
+	word-wrap: break-word;
+	vertical-align: middle;
+	text-align: left;
+	/* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+	font-size: 30px;
+	color: #3d3d3d;
+}
+
+body {
+	background: linear-gradient(135deg, #fff6d0 0%, #d3cbaa 100%);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+#container {
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+
+#container .hitbox {
+	margin: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgb(134, 60, 0);
+	transition: 0.5s;
+	overflow: visible;
+}
+
+#container .hitbox2 {
+	height: 150px;
+	margin: 20px;
+	border-radius: 10px;
+	transition: 0.5s;
+	overflow: visible;
+}
+
+#container,
+#container .box {
+	position: relative;
+	transform-style: preserve-3d;
+}
+
+#container .box {
+	grid-template-areas:
+		"icone name name name name"
+		"image image image image image"
+		"desc desc desc desc desc";
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	width: 100%;
+	height: 100%;
+	background: #fff6d0;
+
+	border-radius: 10px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+#container .box .desc,
+#container .box .name,
+#container .box .product,
+#container .box .back {
+	position: relative;
+	transition: 1s;
+	top: 0%;
+}
+
+#container .box:hover * {
+	top: -150px;
+}
+
+#container .box .desc {
+	grid-area: desc;
+	text-align: justify;
+	font-weight: 800;
+	align-self: center;
+	color: #3d3d3d;
+
+	transform: translate3d(0, 0, 1px);
+	padding: 20px;
+}
+
+#container .box .product {
+	grid-area: image;
+	width: 100%;
+	min-height: 200px;
+	height: 100%;
+	overflow: hidden;
+	align-self: center;
+	object-fit: cover;
+}
+
+#container .box .name {
+	grid-area: name;
+	left: -5%;
+	text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+	color: #3d3d3d;
+}
+
+#container .box .back {
+	grid-area: icone;
+}
+
+#container .box .back img {
+	object-fit: contain;
+	margin: 15px;
+	filter: brightness(0);
+}
+
+@media (min-width: 1500px) {
+	#background {
+		padding: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#container .box {
+		grid-template-rows: 150px 1fr;
+	}
+
+	#container .box .back img {
+		height: 120px;
+		width: 120px;
+	}
+
+	#container .hitbox,
+	#container .hitbox2 {
+		height: 150px;
+		width: 29%;
+	}
+
+	#container .box .name {
+		font-size: 40px;
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+	#background {
+		padding: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#container .box {
+		grid-template-rows: 150px 1fr;
+	}
+
+	#container .box .back img {
+		height: 120px;
+		width: 120px;
+	}
+
+	#container .hitbox,
+	#container .hitbox2 {
+		height: 150px;
+		width: 42%;
+	}
+
+	#container .box .name {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 999px) {
+	#background {
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	#background-text {
+		text-align: center;
+	}
+
+	#background-text2 {
+		font-size: 20px;
+		text-align: center;
+		transform: skewY(-7deg);
+	}
+
+	#container .box {
+		grid-template-rows: 120px 1fr;
+	}
+
+	#container .hitbox,
+	#container .hitbox2 {
+		height: 120px;
+		min-width: 100%;
+	}
+
+	#container .box .desc {
+		font-size: 15px;
+	}
+
+	#container .box .back img {
+		height: 70px;
+		width: 70px;
+	}
+
+	#container .box .name {
+		font-size: 20px;
+	}
+}
