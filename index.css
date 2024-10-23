@@ -5,8 +5,9 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Poppins", sans-serif;
+	font-family: 'PT Serif', serif	;
 	-ms-overflow-style: none;
+	background-color:#fff;
 	scrollbar-width: none;
 	font-size: 20px;
 }
@@ -21,9 +22,9 @@
 	word-wrap: break-word;
 	vertical-align: middle;
 	text-align: left;
-	font-family: Passion One;
+	font-family: 'PT Serif', serif;
 	font-size: 70px;
-	color: #3d3d3d;
+	color: #333332;
 	z-index: -1;
 }
 
@@ -33,7 +34,7 @@
 	text-align: right;
 	/* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 	font-size: 30px;
-	color: #3d3d3d;
+	color: #333332;
 }
 
 #background-text3 {
@@ -42,7 +43,7 @@
 	text-align: left;
 	/* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 	font-size: 30px;
-	color: #3d3d3d;
+	color: #333332;;
 }
 
 body {
